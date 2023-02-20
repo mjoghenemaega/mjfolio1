@@ -4889,13 +4889,14 @@ preloader code  */
 }
 
 #status {
-	width:200px;
-	height:200px;
+	width:400px;
+  height: 400px;
+	/* height:600px; */
 	position:absolute;
 	left:50%; /* centers the loading animation horizontally on the screen */
 	top:50%; /* centers the loading animation vertically on the screen */
-	background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvkXciXd_bcjuWYuJTgHML765AeIo5zqaGJEWHkYz0Yq5j0PBB'); /* path to your loading animation */
+	background-image:url('../img/content/Drink\ water\ ....gif'); /* path to your loading animation */
 	background-repeat:no-repeat;
 	background-position:center;
-	margin:-100px 0 0 -100px; /* is width and height divided by two */
+	margin: -200px 0 0 -200px;  /* is width and height divided by two */
 }
