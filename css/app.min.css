@@ -3137,7 +3137,7 @@ body:not(.touch-device) .owl-item:hover .details__preview {
         margin-bottom: 48px; } }
     @media only screen and (max-width: 767px) {
       .cases__nav {
-        display: none; } }
+        display: block; } }
   .cases__link {
     position: relative;
     padding-bottom: 10px;
@@ -3150,7 +3150,8 @@ body:not(.touch-device) .owl-item:hover .details__preview {
     transition: color .25s; }
     @media only screen and (max-width: 1279px) {
       .cases__link {
-        font-size: 14px; } }
+        font-size: 20px;
+      font-weight: bolder; } }
     .cases__link:before {
       content: "";
       position: absolute;
