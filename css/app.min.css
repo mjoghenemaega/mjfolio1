@@ -4885,19 +4885,7 @@ preloader code  */
 	left:0;
 	right:0;
 	bottom:0;
-	background-color:#fff;/* change if the mask should be a color other than white */
+	background-color:#111029;/* change if the mask should be a color other than white */
 	z-index:99; /* makes sure it stays on top */
 }
 
-#status {
-	width:400px;
-  height: 400px;
-	/* height:600px; */
-	position:absolute;
-	left:50%; /* centers the loading animation horizontally on the screen */
-	top:50%; /* centers the loading animation vertically on the screen */
-	background-image:url('../img/content/Drink\ water\ ....gif'); /* path to your loading animation */
-	background-repeat:no-repeat;
-	background-position:center;
-	margin: -200px 0 0 -200px;  /* is width and height divided by two */
-}
