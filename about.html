@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Webpage</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+			<button id="theme-toggle" onclick="toggleTheme()">
+				<img src="sun.svg" alt="Light/Dark mode switch">
+			</button>
+		</nav>
+	</header>
+	<main>
+		<section id="banner">
+			<h1>Welcome to my webpage</h1>
+		</section>
+		<section>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, eros eu volutpat bibendum, massa nunc posuere nibh, ut posuere quam ipsum in ex. Maecenas sit amet enim vel ex sollicitudin malesuada eu ut odio. Fusce dapibus tristique metus in tempor. Integer semper lorem ac risus dapibus, ut bibendum leo venenatis. Nam eu dui quis elit suscipit maximus. Nulla in risus quam. Vivamus consectetur sagittis eros, vel finibus libero luctus eu. Praesent at odio diam. Praesent convallis elit in massa suscipit aliquam. Etiam ac vestibulum justo. Nullam vulputate nibh at tristique dapibus. Fusce euismod metus sapien, vel congue sapien iaculis eu.</p>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 My Webpage</p>
+	</footer>
+	<script src="script.js"></script>
+    <style>body {
+        background-image: url('light-background.jpg');
+    }
+    
+    header {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    nav li {
+        margin-right: 1rem;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    
+    main {
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    #banner {
+        background-image: url('banner.jpg');
+        background-size: cover;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #banner h1 {
+        color: #fff;
+        font-size: 3rem;
+        text-shadow: 2px 2px #333;
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    #theme-toggle {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #theme-toggle img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    /* Dark mode styles */
+    
+    body.dark-mode {
+        background-image: url('dark-background.jpg');
+    }
+    
+    body.dark-mode header {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    body.dark-mode nav a {
+        color: #fff;
+    }
+    
+    body.dark-mode #banner h1 {
+        text-shadow: 2px 2px #fff;
+    }
+    
+    </style>
+</body>
+</html>

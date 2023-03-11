@@ -29,6 +29,7 @@
     <meta property="og:site_name" content="mjoghenemaega folio">
    
     <link rel="stylesheet" media="all" href="css/app.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script>
       var viewportmeta = document.querySelector('meta[name="viewport"]');
       if (viewportmeta) {
@@ -39,6 +40,7 @@
           viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
         }
       }
+
     </script>
   </head>
   <body>
@@ -198,9 +200,13 @@ loading animation  */
               <a class="header__link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 448 512"><path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z"/></svg>
               Telegram</a>
+
+
               
               
               </div>
+              <button class="mode-toggle"><i class="fas fa-moon"></i><i class="fas fa-sun"></i></button>
+              
             <button class="header__burger js-header-burger"></button>
           </div>
           <div class="header__wrapper js-header-wrapper">
@@ -244,7 +250,7 @@ loading animation  */
             </div>
           </div>
         </div>
-        <div class="main__bg"><img class="main__pic" src=" img/content/bg-main.jpg" alt=""></div>
+        <div class="main__bg"><img class="main__pic" src=" img/content/bg-m.jpg" alt=""></div>
         <div class="main__center center">
           <div class="main__wrap">
             <div class="main__stage stage" data-aos="transform">Moses-Johnson Oghenemaega</div>
@@ -476,6 +482,7 @@ loading animation  */
                               </div></a>
             </div>
           </div>
+          <br>
 
 
 
@@ -485,6 +492,7 @@ loading animation  */
             <div class="cases__figure"><img class="cases__pic js-parallax" data-scale="1.8" data-orientation="down" src="img/content/figure-3.png" alt=""></div>
           </div>
         </div>
+        
         <div class="review">
           <div class="review__center center">
             <div class="review__stage stage" data-aos="animation-scale-y">What People Say</div>
@@ -540,6 +548,7 @@ loading animation  */
           </div>
         </div>
         <div class="wrapper wrapper_dark">
+          <br>
           <div class="contacts">
             <div class="contacts__center center">
               <div class="contacts__container">
@@ -683,6 +692,128 @@ loading animation  */
       </div>
       <div class="cursor"></div>
     </div>
+    <style>
+      
+      
+      
+      body {
+        background-image: url('../img/content/8.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: #111029;
+      }
+
+      .mode-toggle {
+        background-color: #333;
+        color: #f5f5f5;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 19px;
+        position: fixed;
+        top: 25px;
+        right: 20%;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .mode-toggle:hover {
+        transform: scale(1.1);
+      }
+      body.dark-mode {
+        background-image: url('../img/content/9.jpg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      
+        
+        color: #f5f5f5;
+      }
+      
+      body.dark-mode .details{
+        background-color: #121212;
+
+      }
+      body.dark-mode .contacts{
+        background-color: #121212;
+
+      }
+      
+      body.dark-mode .cases__link{
+        color: #fff;
+
+      }
+     
+      body.dark-mode .wrapper {
+        background-color: #121212;
+        color: #f5f5f5;
+
+      }
+      body.dark-mode .cases {
+        background-color: #121212;
+        color: #f5f5f5;
+
+      }
+      body.dark-mode .cases__body{
+        background-color: #121212dd;
+        color: #f5f5f5;
+      }
+      
+      body.dark-mode .cases__info{
+       
+        color: #f5f5f5;
+      }
+      body.dark-mode .cases__text{
+       
+       color: #f5f5f5;
+     }
+      
+     
+
+      .mode-toggle.dark-mode {
+        background-color: #f5f5f5;
+        color: #333;
+      }
+
+      .mode-toggle.dark-mode .fa-moon {
+        display: none;
+      }
+
+      .mode-toggle.dark-mode .fa-sun {
+        display: inline-block;
+      }
+
+      .mode-toggle .fa-moon {
+        display: inline-block;
+      }
+
+      .mode-toggle .fa-sun {
+        display: none;
+      }
+    </style>
+        <script>
+          const toggleModeButton = document.querySelector('.mode-toggle');
+          const body = document.body;
+          
+          // Check for saved user preference
+          if (localStorage.getItem('mode') === 'dark') {
+            body.classList.add('dark-mode');
+            toggleModeButton.innerHTML = '<i class="fas fa-sun"></i><i class="fas fa-moon"></i>';
+          }
+    
+          // Add event listener to toggle mode button
+          toggleModeButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            // Update user preference
+            if (body.classList.contains('dark-mode')) {
+              localStorage.setItem('mode', 'dark');
+              toggleModeButton.innerHTML = '<i class="fas fa-sun"></i><i class="fas fa-moon"></i>';
+            } else {
+              localStorage.setItem('mode', 'light');
+              toggleModeButton.innerHTML = '<i class="fas fa-moon"></i><i class="fas fa-sun"></i>';
+            }
+          });
+        </script>
     <script src=" https://ui8-folio.herokuapp.com/js/lib/jquery.min.js"></script>
    
 
