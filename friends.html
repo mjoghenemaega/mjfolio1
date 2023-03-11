@@ -7,93 +7,52 @@
     <title>Document</title>
 </head>
 <body>
-<div class="preloader">
-  <svg viewBox="0 0 200 200">
-    <g class="pen">
-      <path class="body" d="M20,180 L40,20 L120,20 L140,180" fill="none" stroke="#000000" stroke-width="10"/>
-      <path class="tip" d="M140,180 L150,150 L130,150 L140,180" fill="#000000"/>
-    </g>
-  </svg>
-  <div class="text">mjfolio</div>
-</div>
+  <div class="loading-text">
+    <span>Loading</span>
+    <span class="dot">.</span>
+    <span class="dot">.</span>
+    <span class="dot">.</span>
+  </div>
 
 
 
-  
 <style>
-  .preloader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #ffffff;
+
+
+
+.loading-text {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 }
 
-.pen {
-  transform-origin: 20px 180px;
-  animation: write 2s infinite linear;
+.dot {
+  animation: dot 1.5s infinite;
+  animation-delay: 0s;
+  display: inline-block;
+  margin-right: 5px;
 }
 
-.body {
-  stroke-dasharray: 150;
-  stroke-dashoffset: 150;
-  animation: draw 2s infinite linear;
+.dot:nth-of-type(2) {
+  animation-delay: 0.5s;
 }
 
-.tip {
-  transform-origin: 140px 180px;
+.dot:nth-of-type(3) {
+  animation-delay: 1s;
 }
 
-@keyframes write {
+@keyframes dot {
   0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(-10deg);
-  }
-  20% {
-    transform: rotate(10deg);
-  }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(10deg);
+    opacity: 0;
   }
   50% {
-    transform: rotate(-10deg);
-  }
-  60% {
-    transform: rotate(10deg);
-  }
-  70% {
-    transform: rotate(-10deg);
-  }
-  80% {
-    transform: rotate(10deg);
-  }
-  90% {
-    transform: rotate(-10deg);
+    opacity: 1;
   }
   100% {
-    transform: rotate(0deg);
+    opacity: 0;
   }
 }
 
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-.text {
-  font-size: 48px;
-  font-weight: bold;
-  text-shadow: 0 0 10px #000000;
-  margin-top: 20px;
-}
-
-  
 </style>
 </body>
 </html>
