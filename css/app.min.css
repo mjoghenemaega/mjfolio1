@@ -3119,8 +3119,8 @@ body:not(.touch-device) .owl-item:hover .details__preview {
   @media only screen and (max-width: 767px) {
     .cases {
       padding-top: 64px;
-      margin-left: 10px;
-      margin-right: 1rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
 } }
   .cases__center {
     position: relative;
@@ -3741,8 +3741,8 @@ body:not(.touch-device) .owl-item:hover .details__preview {
         border-radius: 34px; } }
     @media only screen and (max-width: 767px) {
       .contacts__container {
-        padding: 0px 10px 0px 10px;
-        border-radius: 0;
+        padding: 20px 20px 20px 20px;
+        border-radius: 10px;
         background: none; } }
     .contacts__container:before, .contacts__container:after {
       content: "";
