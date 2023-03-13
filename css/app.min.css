@@ -3741,7 +3741,7 @@ body:not(.touch-device) .owl-item:hover .details__preview {
         border-radius: 34px; } }
     @media only screen and (max-width: 767px) {
       .contacts__container {
-        padding: 0;
+        padding: 0px 10px 0px 10px;
         border-radius: 0;
         background: none; } }
     .contacts__container:before, .contacts__container:after {
