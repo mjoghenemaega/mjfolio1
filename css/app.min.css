@@ -1812,7 +1812,7 @@ a.btn {
       display: inline-block;
       width: 32px;
       height: 2px;
-      background: #fff;
+      /* background: #fff; */
       -webkit-transition: -webkit-transform .25s;
       transition: -webkit-transform .25s;
       -o-transition: transform .25s;
@@ -3118,7 +3118,10 @@ body:not(.touch-device) .owl-item:hover .details__preview {
       padding-top: 96px; } }
   @media only screen and (max-width: 767px) {
     .cases {
-      padding-top: 64px; } }
+      padding-top: 64px;
+      margin-left: 10px;
+      margin-right: 1rem;
+} }
   .cases__center {
     position: relative;
     z-index: 2; }
